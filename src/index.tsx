@@ -1,15 +1,30 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NoMatchView from './views/NoMatchView';
+import HomeView from './views/HomeView';
+import CalendarView from './views/CalendarView';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        {/* Dashboard routes */}
+        <Route path="/" element={<App />}>
+          {/* Board */}
+          <Route path="/" element={<HomeView />} />
+          <Route path="/calendar" element={<CalendarView />} />
+        </Route>
+        {/* No match route */}
+        <Route path="*" element={<NoMatchView />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

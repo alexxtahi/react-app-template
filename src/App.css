@@ -1,22 +1,95 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+.custom-card {
+  transition: all 0.5s;
+  color: #566a7f;
 }
 
-/* Base component style */
-.base {
-  width: 90%;
-  height: 90%;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
+.custom-card-text {
+  text-decoration: none;
 }
 
-.base h1 {
-  color: white;
+.custom-card:hover {
+  transform: scale(1.025);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-brief-description {
+  height: 90px;
+  overflow: hidden;
+}
+
+.card-for-modal {
+  text-align: start;
+  padding: 0;
+  border: none;
+}
+
+.product-details-img {
+  border-radius: 8px;
+}
+
+.carousel .thumb,
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border-radius: 14px;
+}
+
+.carousel.carousel-slider .control-arrow {
+  border-radius: 8px;
+}
+
+.product-card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.custom-searchbar {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #8592a3;
+}
+
+.custom-searchbar:focus {
+  border-color: #8592a3;
+}
+
+.custom-searchbar-btn {
+  box-shadow: none;
+}
+
+.custom-card-img-left {
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-price-devise {
+  margin-left: 5px;
+}
+
+.logout-loader {
+  align-items: center;
+  display: flex;
+}
+
+.logout-loader {
+  margin-right: 10px;
+}
+
+#viewOptionsAccordionBtn::after {
+  transform: rotate(var(--rotation));
+}
+
+.sidebar-logo {
+  width: 34px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.app-brand-link {
+  display: flex;
 }
